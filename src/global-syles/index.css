@@ -4,8 +4,3 @@
 body {
     background-color: var(--bg-primary);
 }
-
-main {
-    display: grid;
-    grid-template-columns: 20vw 1fr;
-}

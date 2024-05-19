@@ -5,10 +5,10 @@ function App() {
     return (
         <>
             <Header />
+            <aside>
+                <Nav />
+            </aside>
             <main>
-                <aside>
-                    <Nav />
-                </aside>
                 <section>
                     <h2>Content</h2>
                 </section>
