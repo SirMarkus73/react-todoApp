@@ -1,8 +1,9 @@
 :root,
 root.light {
     --text-color: black;
+    --text-emphasis: orange;
     --bg-primary: #f5f5f5;
-    --bg-secondary: #4b4b4b;
+    --bg-secondary: #858484;
 
     color-scheme: light;
     color: var(--text-color);
@@ -10,6 +11,7 @@ root.light {
 
 :root.dark {
     --text-color: white;
+    --text-emphasis: purple;
     --bg-primary: #181818;
     --bg-secondary: #333;
 
