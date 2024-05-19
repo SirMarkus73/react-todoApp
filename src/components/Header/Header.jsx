@@ -1,7 +1,7 @@
-import styles from './Header.module.css';
+import styles from "./Header.module.css";
 
 function Header() {
-    return (
+  return (
     <header className={styles.header}>
       <h1>Todo app</h1>
     </header>

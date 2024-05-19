@@ -1,5 +1,5 @@
 function Nav() {
-    return <nav>Nav loading</nav>
+  return <nav>Nav loading</nav>;
 }
 
 export default Nav;
