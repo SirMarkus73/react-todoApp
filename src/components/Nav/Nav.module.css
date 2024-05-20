@@ -20,18 +20,16 @@
 }
 
 .dropDownMenu {
+  display: none;
   opacity: 0;
-  translate: -10px;
-  transition:
-    opacity 250ms,
-    translate 1s;
 }
 
 .nav > .navCheckBoxInput:checked ~ .dropDownMenu {
   display: flex;
   flex-wrap: wrap;
-  translate: 0;
   opacity: 1;
+  animation-name: appearFromLeft;
+  animation-duration: 800ms;
 }
 /* If nav is selected show background */
 
@@ -65,4 +63,13 @@
   gap: 2rem;
   left: 0;
   padding: 2rem 15px;
+}
+
+@keyframes appearFromLeft {
+  from {
+    translate: -10px;
+  }
+  to {
+    translate: 0;
+  }
 }
