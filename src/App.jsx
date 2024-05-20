@@ -1,6 +1,7 @@
 import { Header } from './components/Header/Header.jsx'
 import { Nav } from './components/Nav/Nav.jsx'
 import { usePages } from './hooks/usePages.jsx'
+import { TaskContextProvider } from './providers/TaskContextProvider.jsx'
 
 function App() {
   const { pageNow } = usePages()
@@ -11,7 +12,7 @@ function App() {
       <aside>
         <Nav />
       </aside>
-      {pageNow}
+      <TaskContextProvider>{pageNow}</TaskContextProvider>
     </>
   )
 }

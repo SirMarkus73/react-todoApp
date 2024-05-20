@@ -1,7 +1,7 @@
 import { useContext } from 'react'
 
 import { pages } from '../constants/pages.js'
-import { CreateTask } from '../pages/CreateTask.jsx'
+import { CreateTask } from '../pages/CreateTask/CreateTask.jsx'
 import { Index } from '../pages/index.jsx'
 import { PageContext } from '../providers/PageContextProvider.jsx'
 
