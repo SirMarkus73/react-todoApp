@@ -15,17 +15,29 @@
   margin: 0;
 }
 
+.nav > input {
+  display: none;
+}
+
+.dropDownMenu {
+  opacity: 0;
+  translate: -10px;
+  transition:
+    opacity 250ms,
+    translate 1s;
+}
+
 .nav > .navCheckBoxInput:checked ~ .dropDownMenu {
   display: flex;
+  flex-wrap: wrap;
+  translate: 0;
+  opacity: 1;
 }
+/* If nav is selected show background */
 
 .nav:has(input:checked) {
   background-color: var(--bg-secondary);
-}
-
-.nav > input,
-.dropDownMenu {
-  display: none;
+  transition: background-color 250ms;
 }
 
 .navCheckBox {
