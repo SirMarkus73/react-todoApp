@@ -1,5 +1,6 @@
 import { useId, useState } from 'react'
 
+import { themes, useTheme } from '../../hooks/useTheme.js'
 import NavCollapsed from '../../icons/NavCollapsed.jsx'
 import NavExpanded from '../../icons/NavExpanded.jsx'
 import styles from './Nav.module.css'
@@ -10,6 +11,11 @@ function Nav() {
   const themeSelector = useId()
 
   const [navExpanded, setNavExpanded] = useState(false)
+  const { theme, changeTheme } = useTheme()
+
+  const handleThemeChange = (e) => {
+    changeTheme(e.target.value)
+  }
 
   return (
     <nav className={styles.nav}>
@@ -34,7 +40,7 @@ function Nav() {
           <legend>Settings</legend>
           <label htmlFor={languageSelector}>
             Language:
-            <select>
+            <select id={languageSelector}>
               <option value={'en'}>English</option>
               <option value={'es'}>Español</option>
             </select>
@@ -42,9 +48,16 @@ function Nav() {
 
           <label htmlFor={themeSelector}>
             Theme:
-            <select>
-              <option value={'light'}>Light</option>
-              <option value={'dark'}>Dark</option>
+            <select
+              id={themeSelector}
+              onChange={handleThemeChange}
+              value={theme}
+            >
+              {themes.map((theme) => (
+                <option key={theme} value={theme}>
+                  {theme}
+                </option>
+              ))}
             </select>
           </label>
         </fieldset>
