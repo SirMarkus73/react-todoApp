@@ -5,7 +5,7 @@
   top: 0;
   left: 0;
   padding: 0.5rem;
-  height: 100dvh;
+  height: auto;
 }
 
 .nav > ul {
@@ -36,6 +36,7 @@
 .nav:has(input:checked) {
   background-color: var(--bg-secondary);
   transition: background-color 250ms;
+  height: 100dvh;
 }
 
 .navCheckBox {
