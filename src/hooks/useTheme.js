@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 
-import { themes } from '../consts.js'
+import { themes } from '../constants/theme.js'
 
 function useTheme() {
   const [theme, setTheme] = useState(localStorage.getItem('theme') || 'light')

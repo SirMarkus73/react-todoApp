@@ -1,6 +1,6 @@
 import { useId, useState } from 'react'
 
-import { themes } from '../../consts.js'
+import { themes } from '../../constants/theme.js'
 import { useTheme } from '../../hooks/useTheme.js'
 import NavCollapsed from '../../icons/NavCollapsed.jsx'
 import NavExpanded from '../../icons/NavExpanded.jsx'
