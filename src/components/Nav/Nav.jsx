@@ -13,10 +13,6 @@ function Nav() {
   const [navExpanded, setNavExpanded] = useState(false)
   const { theme, changeTheme } = useTheme()
 
-  const handleThemeChange = (e) => {
-    changeTheme(e.target.value)
-  }
-
   return (
     <nav className={styles.nav}>
       <label htmlFor={inputID} className={styles.navCheckBox}>
@@ -50,7 +46,7 @@ function Nav() {
             Theme:
             <select
               id={themeSelector}
-              onChange={handleThemeChange}
+              onChange={(e) => changeTheme(e.target.value)}
               value={theme}
             >
               {themes.map((theme) => (
