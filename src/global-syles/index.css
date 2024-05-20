@@ -4,7 +4,9 @@
 
 body {
   background-color: var(--bg-primary);
-  transition: all 1s;
+  transition:
+    background-color 1s,
+    color 500ms;
 
-  font-family: "JetBrains Mono", monospace;
+  font-family: 'JetBrains Mono', monospace;
 }
