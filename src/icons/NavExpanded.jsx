@@ -24,4 +24,4 @@ function NavExpanded(props) {
   )
 }
 
-export default NavExpanded
+export { NavExpanded }

@@ -1,5 +1,5 @@
-import Header from './components/Header/Header.jsx'
-import Nav from './components/Nav/Nav.jsx'
+import { Header } from './components/Header/Header.jsx'
+import { Nav } from './components/Nav/Nav.jsx'
 
 function App() {
   return (

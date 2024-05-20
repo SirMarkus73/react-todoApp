@@ -2,8 +2,8 @@ import { useId, useState } from 'react'
 
 import { themes } from '../../constants/theme.js'
 import { useTheme } from '../../hooks/useTheme.js'
-import NavCollapsed from '../../icons/NavCollapsed.jsx'
-import NavExpanded from '../../icons/NavExpanded.jsx'
+import { NavCollapsed } from '../../icons/NavCollapsed.jsx'
+import { NavExpanded } from '../../icons/NavExpanded.jsx'
 import styles from './Nav.module.css'
 
 function Nav() {
@@ -63,4 +63,4 @@ function Nav() {
   )
 }
 
-export default Nav
+export { Nav }

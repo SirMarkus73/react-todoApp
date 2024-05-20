@@ -24,4 +24,4 @@ function NavCollapsed(props) {
   )
 }
 
-export default NavCollapsed
+export { NavCollapsed }
