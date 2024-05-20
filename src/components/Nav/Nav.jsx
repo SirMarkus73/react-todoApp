@@ -1,6 +1,7 @@
 import { useId, useState } from 'react'
 
-import { themes, useTheme } from '../../hooks/useTheme.js'
+import { themes } from '../../consts.js'
+import { useTheme } from '../../hooks/useTheme.js'
 import NavCollapsed from '../../icons/NavCollapsed.jsx'
 import NavExpanded from '../../icons/NavExpanded.jsx'
 import styles from './Nav.module.css'

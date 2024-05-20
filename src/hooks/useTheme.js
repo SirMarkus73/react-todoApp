@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 
-const themes = ['light', 'dark']
+import { themes } from '../consts.js'
 
 function useTheme() {
   const [theme, setTheme] = useState(localStorage.getItem('theme') || 'light')
@@ -23,4 +23,4 @@ function useTheme() {
   return { theme, changeTheme }
 }
 
-export { themes, useTheme }
+export { useTheme }
