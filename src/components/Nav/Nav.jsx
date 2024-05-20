@@ -1,6 +1,7 @@
 import { useId, useState } from 'react'
 
 import { themes } from '../../constants/theme.js'
+import { usePages } from '../../hooks/usePages.jsx'
 import { useTheme } from '../../hooks/useTheme.js'
 import { NavCollapsed } from '../../icons/NavCollapsed.jsx'
 import { NavExpanded } from '../../icons/NavExpanded.jsx'
@@ -13,6 +14,7 @@ function Nav() {
 
   const [navExpanded, setNavExpanded] = useState(false)
   const { theme, changeTheme } = useTheme()
+  const { setMainPage } = usePages()
 
   return (
     <nav className={styles.nav}>
@@ -33,6 +35,25 @@ function Nav() {
         }}
       />
       <div className={styles.dropDownMenu}>
+        <fieldset>
+          <legend>Pages</legend>
+          <button
+            onClick={() => {
+              setMainPage('index')
+              setNavExpanded(false)
+            }}
+          >
+            Home
+          </button>
+          <button
+            onClick={() => {
+              setMainPage('createTask')
+              setNavExpanded(false)
+            }}
+          >
+            Create Task
+          </button>
+        </fieldset>
         <fieldset>
           <legend>Settings</legend>
           <label htmlFor={languageSelector}>
