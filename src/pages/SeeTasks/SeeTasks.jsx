@@ -1,3 +1,4 @@
+import { Task } from '../../components/Task/Task.jsx'
 import { useTasks } from '../../hooks/useTasks.js'
 
 function SeeTasks() {
@@ -6,10 +7,7 @@ function SeeTasks() {
   return (
     <main>
       {tasks.map((task) => (
-        <article key={task.id}>
-          <h2>{task.title}</h2>
-          <p>{task.body}</p>
-        </article>
+        <Task task={task} key={task.id} />
       ))}
     </main>
   )
