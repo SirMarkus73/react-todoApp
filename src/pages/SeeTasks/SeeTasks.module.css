@@ -1,0 +1,16 @@
+.main {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1rem;
+  justify-items: center;
+  padding: 2rem;
+
+  height: 80%;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.main > h1 {
+  grid-column: 1/-1;
+  text-align: center;
+}

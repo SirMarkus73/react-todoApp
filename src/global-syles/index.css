@@ -10,3 +10,8 @@ body {
 
   font-family: 'JetBrains Mono', monospace;
 }
+
+#root {
+  height: 100dvh;
+  max-height: 100dvh;
+}
