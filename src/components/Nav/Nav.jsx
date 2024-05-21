@@ -1,5 +1,6 @@
 import { useId, useState } from 'react'
 
+import { pages } from '../../constants/pages.js'
 import { themes } from '../../constants/theme.js'
 import { usePages } from '../../hooks/usePages.jsx'
 import { useTheme } from '../../hooks/useTheme.js'
@@ -37,22 +38,17 @@ function Nav() {
       <div className={styles.dropDownMenu}>
         <fieldset>
           <legend>Pages</legend>
-          <button
-            onClick={() => {
-              setMainPage('index')
-              setNavExpanded(false)
-            }}
-          >
-            Home
-          </button>
-          <button
-            onClick={() => {
-              setMainPage('createTask')
-              setNavExpanded(false)
-            }}
-          >
-            Create Task
-          </button>
+          {Object.values(pages).map((page) => (
+            <button
+              key={page}
+              onClick={() => {
+                setMainPage(page)
+                setNavExpanded(false)
+              }}
+            >
+              {page}
+            </button>
+          ))}
         </fieldset>
         <fieldset>
           <legend>Settings</legend>

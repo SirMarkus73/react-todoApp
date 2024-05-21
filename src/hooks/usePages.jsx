@@ -2,6 +2,7 @@ import { useContext } from 'react'
 
 import { pages } from '../constants/pages.js'
 import { CreateTask } from '../pages/CreateTask/CreateTask.jsx'
+import { SeeTasks } from '../pages/SeeTasks/SeeTasks.jsx'
 import { Index } from '../pages/index.jsx'
 import { PageContext } from '../providers/PageContextProvider.jsx'
 
@@ -14,6 +15,8 @@ function usePages() {
     pageNow = <CreateTask />
   } else if (mainPage === pages.index) {
     pageNow = <Index />
+  } else if (mainPage === pages.seeTasks) {
+    pageNow = <SeeTasks />
   }
 
   return { setMainPage, pageNow }

@@ -1,5 +1,7 @@
 import { useId } from 'react'
 
+import { pages } from '../../constants/pages.js'
+import { usePages } from '../../hooks/usePages.jsx'
 import { useTasks } from '../../hooks/useTasks.js'
 import styles from './CreateTask.module.css'
 
@@ -7,6 +9,7 @@ function CreateTask() {
   const titleInput = useId()
   const bodyInput = useId()
   const { addTask } = useTasks()
+  const { setMainPage } = usePages()
 
   const createTask = (event) => {
     event.preventDefault()
@@ -14,6 +17,7 @@ function CreateTask() {
     const body = event.target[1].value
 
     addTask(title, body)
+    setMainPage(pages.seeTasks)
   }
 
   return (

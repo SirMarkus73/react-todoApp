@@ -1,1 +1,5 @@
-export const pages = { index: 'index', createTask: 'createTask' }
+export const pages = {
+  index: 'Index',
+  createTask: 'Create Task',
+  seeTasks: 'See Tasks',
+}
