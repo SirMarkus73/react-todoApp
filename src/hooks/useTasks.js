@@ -10,8 +10,6 @@ function useTasks() {
     setTasks([...tasks, { id, title, body }])
   }
 
-  console.log(tasks)
-
   return { tasks, addTask }
 }
 
