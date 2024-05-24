@@ -6,7 +6,10 @@ import { pages } from '../constants/pages.js'
 const PageContext = createContext()
 
 function PageContextProvider({ children }) {
-  const [mainPage, setMainPage] = useState(pages.index)
+  const [mainPage, setMainPage] = useState(() => {
+    const mainPage = localStorage.getItem('mainPage')
+    return mainPage || pages.index
+  })
   return (
     <PageContext.Provider value={{ mainPage, setMainPage }}>
       {children}

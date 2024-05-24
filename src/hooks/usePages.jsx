@@ -1,4 +1,4 @@
-import { useContext } from 'react'
+import { useContext, useEffect } from 'react'
 
 import { pages } from '../constants/pages.js'
 import { CreateTask } from '../pages/CreateTask/CreateTask.jsx'
@@ -8,6 +8,10 @@ import { PageContext } from '../providers/PageContextProvider.jsx'
 
 function usePages() {
   const { setMainPage, mainPage } = useContext(PageContext)
+
+  useEffect(() => {
+    localStorage.setItem('mainPage', mainPage)
+  }, [mainPage])
 
   let pageNow = <Index />
 
