@@ -43,10 +43,11 @@
 }
 
 .navCheckBox {
-  fill: var(--text-color);
+  fill: whitesmoke;
 }
 
 .dropDownMenu > fieldset {
+  color: white;
   display: flex;
   flex-direction: column;
   gap: 1rem;
