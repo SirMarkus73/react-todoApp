@@ -1,6 +1,19 @@
 @import url('../../global-styles/vars.css');
 
 .index {
-  display: grid;
-  place-items: center;
+  display: flex;
+  margin-top: 2rem;
+  align-items: center;
+  flex-direction: column;
+  height: 100dvh;
+}
+
+.index > h1 {
+  font-size: 2rem;
+  color: var(--text-emphasis);
+}
+
+.index > p {
+  font-size: 1.5rem;
+  color: var(--text-color);
 }
