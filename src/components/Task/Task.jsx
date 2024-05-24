@@ -6,9 +6,13 @@ import { EditIcon } from '../../icons/EditIcon'
 import styles from './Task.module.css'
 
 function Task({ task }) {
-  const { deleteTask } = useTasks()
+  const { deleteTask, editTask } = useTasks()
   const handleDelete = () => {
     deleteTask(task.id)
+  }
+
+  const handleEdit = () => {
+    editTask(task.id)
   }
 
   return (
@@ -21,7 +25,7 @@ function Task({ task }) {
         <button className={styles.taskDelete} onClick={handleDelete}>
           <DeleteIcon />
         </button>
-        <button className={styles.taskEdit}>
+        <button className={styles.taskEdit} onClick={handleEdit}>
           <EditIcon />
         </button>
       </section>
