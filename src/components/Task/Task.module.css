@@ -1,3 +1,5 @@
+@import url('../../global-styles/vars.css');
+
 .task {
   background-color: var(--bg-secondary);
   padding: 1rem;
@@ -7,12 +9,36 @@
   width: 300px;
 }
 
-.task > h2 {
+.task h2 {
+  text-align: center;
   text-wrap: balance;
   word-break: break-word;
 }
 
-.task > p {
+.task p {
   text-wrap: pretty;
   word-break: break-word;
+}
+
+.task button {
+  border: 0;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.taskSettings {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.taskDelete,
+.taskEdit {
+  fill: var(--text-color);
+  transition: color 0.3s;
+}
+
+.taskDelete:hover,
+.taskEdit:hover {
+  fill: var(--text-emphasis);
 }

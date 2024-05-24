@@ -10,11 +10,16 @@ function useTasks() {
     setTasks([...tasks, { id, title, body }])
   }
 
+  const deleteTask = (id) => {
+    const newTasks = [...tasks]
+    setTasks(newTasks.filter((task) => task.id !== id))
+  }
+
   useEffect(() => {
     localStorage.setItem('tasks', JSON.stringify(tasks))
   }, [tasks])
 
-  return { tasks, addTask }
+  return { tasks, addTask, deleteTask }
 }
 
 export { useTasks }
