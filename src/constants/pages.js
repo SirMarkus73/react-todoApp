@@ -1,5 +1,5 @@
 export const pages = {
-  index: 'Index',
+  index: 'Home',
   createTask: 'Create Task',
   seeTasks: 'See Tasks',
 }
